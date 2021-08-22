@@ -12,7 +12,9 @@
         <?php if ( $section_text = get_sub_field( 'section_text' ) ) : ?>
             <div class="row justify-content-center">
                 <div class="col-12">
-                    <?php echo $section_text; ?>
+                    <p>
+                        <?php echo $section_text; ?>
+                    </p>
                 </div>
             </div>
         <?php endif; ?>
