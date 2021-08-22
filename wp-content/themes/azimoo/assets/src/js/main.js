@@ -1,7 +1,6 @@
 // Webpack Imports
 import * as bootstrap from 'bootstrap';
 
-
 ( function () {
 	'use strict';
 
@@ -23,4 +22,5 @@ import * as bootstrap from 'bootstrap';
 			trigger: 'focus',
 		} );
 	} );
+
 } )();

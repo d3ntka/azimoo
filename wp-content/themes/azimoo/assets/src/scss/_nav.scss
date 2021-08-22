@@ -1,0 +1,17 @@
+.navbar{
+    background-color: $gray-2;
+}
+.navbar-nav{
+    & .menu-item:last-child{
+        a{
+            color: $primary-light;
+        }
+    }
+}
+
+
+
+
+.footer{
+    background-color: $dark;
+}

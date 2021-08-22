@@ -477,6 +477,26 @@ if ( is_readable( $custom_walker_footer ) ) {
 }
 
 
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page(array(
+		'page_title' 	=> 'Opcje motywu',
+		'menu_title'	=> 'Opcje motywu',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+
+}
+
+function cc_mime_types($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
+
+
 /**
  * Loading All CSS Stylesheets and Javascript Files.
  *
@@ -495,6 +515,7 @@ function azimoo_scripts_loader() {
 
 	// 2. Scripts.
 	wp_enqueue_script( 'mainjs', get_template_directory_uri() . '/assets/js/main.bundle.js', array(), $theme_version, true );
+	wp_enqueue_script( 'glidejs', get_template_directory_uri() . '/assets/js/glide.min.js', array(), $theme_version, false );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
