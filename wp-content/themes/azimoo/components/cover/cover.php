@@ -10,9 +10,10 @@ if ( $cover_img ) : ?>
 
 <?php endif; ?>
 
+<div class="sections__shadow">
 
-<section class="cover-photo">
+<section class="cover-photo indent__in">
 
 </section>
-
+    </div>
 <!-- / cover-photo -->

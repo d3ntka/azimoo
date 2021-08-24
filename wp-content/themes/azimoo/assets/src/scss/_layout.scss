@@ -3,7 +3,7 @@
 }
 
 .cover-photo{
-    height: 15rem;
+    height: 22rem;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -31,4 +31,43 @@
             background-color: $primary-light;
         }
     }
+}
+
+.section{
+    &__main{
+    // padding-top: 40px;
+    }
+    &__cont{
+        padding-top:5rem;
+        padding-bottom:10rem;
+    }
+    &__title{
+
+    }
+
+    &__bg{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("../img/cover.jpg");
+    }
+}
+
+.indent{
+    &__in{
+        clip-path: polygon(0 0, 10% 20px, 90% 20px, 100% 0, 100% 100%, 0 100%);
+        margin-top: -25px;
+        padding-top: 25px;
+    }
+    &__out{
+        clip-path: polygon(0 20px, 10% 0, 90% 0, 100% 20px, 100% 100%, 0 100%);
+        margin-top: -25px;
+        padding-top: 25px;
+    }
+}
+
+.sections__shadow{
+    // filter: drop-shadow(0 0 50px 100px #888888)
+    filter: drop-shadow(0 -4px 4px rgba($dark, 0.8));
+    // box-shadow: 0 0 5px 10px #888888;
 }

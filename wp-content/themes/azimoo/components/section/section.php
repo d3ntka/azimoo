@@ -1,11 +1,19 @@
-<section class="bg-<?=$section_bg_color?>">
+<div class="sections__shadow">
+<!-- <div class="section__bg"> -->
+
+<!-- <div class="indent indent--<?=$section_bg_color?>"></div> -->
+<section class="section__main indent__<?=$indent?> bg-<?=$section_bg_color?>">
+<!-- <div class="triangle"></div> -->
+    <div class="section__cont">
     <div class="container">
         <?php if ( $section_title = get_sub_field( 'section_title' ) ) : ?>
             <div class="row justify-content-center">
                 <div class="col-auto">
-                    <h1>
-                        <?php echo ( $section_title ); ?>
-                    </h1>
+                    <div class="section__title">
+                        <h1>
+                            <?php echo ( $section_title ); ?>
+                        </h1>
+                    </div>
                 </div>
             </div>
         <?php endif; ?>
@@ -31,4 +39,8 @@
             </div>
         <?php endif; ?>
     </div>
+    </div>
 </section>
+
+<!-- </div> -->
+</div>
