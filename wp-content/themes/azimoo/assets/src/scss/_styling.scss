@@ -1,171 +1,187 @@
-
-html{
-    font-size: 62.5%; //1rem = 10px
-    // overflow-x: hidden;
+html {
+  font-size: 62.5%; //1rem = 10px
+  // overflow-x: hidden;
 }
 
-body{
-    // @include font-size(30);
-    font-size: 1.6rem;
-    overflow-x: hidden;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    background-color: $gray-1;
+body {
+  // @include font-size(30);
+  font-size: 1.4rem;
+  overflow-x: hidden;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  background-color: $gray-1;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
 }
 
-h1{
-    @include rfs(3.2rem);
-    text-align: center;
+h1 {
+  @include rfs(3.2rem);
+  text-align: center;
+  font-weight: 700;
 }
 
-h2{
-    // @include rfs(4rem);
-    // font-weight: 500;
+h2 {
+  // @include rfs(4rem);
+  // font-weight: 500;
 }
 
-h3{
-    // @include rfs(2.5rem);
+h3 {
+  font-size: 1.9rem;
+  line-height: 1.5;
 }
 
 // p{
-    
+
 // }
 
-a{
-    transition: color 0.2s ease;
+a {
+  transition: color 0.2s ease;
 }
 
-.medium{
-    font-weight: 500;
+.medium {
+  font-weight: 500;
 }
-.bold{
-    font-weight: 700;
+.bold {
+  font-weight: 700;
 }
 
 // $inset-w: calc(50vw-20rem);
-.bg-primary{
-    background-color: $primary;
+.bg-primary {
+  background-color: $primary;
 }
-.bg-gray-1{
-    background-color: $gray-1;
+.bg-gray-1 {
+  background-color: $gray-1;
 }
-.bg-gray-2{
-    background-color: $gray-2;
+.bg-gray-2 {
+  background-color: $gray-2;
 }
-.bg-gray-3{
-    background-color: $gray-3;
+.bg-gray-3 {
+  background-color: $gray-3;
 }
-.bg-gray-4{
-    background-color: $gray-4;
+.bg-gray-4 {
+  background-color: $gray-4;
 }
-.bg-dark{
-    background-color: $dark;
+.bg-dark {
+  background-color: $dark;
 }
-.bg-white{
-    background-color: #fff;
-    color: $text-dark;
-}
-
-
-.indent{
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 80px 50vw 0 50vw;
-    margin-bottom: -60px;
-    margin-top: -20px;
-    // border-style: inset;
-    &--primary{
-        border-color: transparent $primary transparent $primary;
-    }
-    &--gray-1{
-        border-color: transparent $gray-1 transparent $gray-1;
-    }
-    &--gray-2{
-        border-color: transparent $gray-2 transparent $gray-2;
-    }
-    &--gray-3{
-        border-color: transparent $gray-3 transparent $gray-3;
-    }
-    &--gray-4{
-        border-color: transparent $gray-4 transparent $gray-4;
-    }
-    &--dark{
-        border-color: transparent $dark transparent $dark;
-    }
-    &--white{
-        border-color: transparent #fff transparent #fff;
-    }
+.bg-white {
+  background-color: #fff;
+  color: $text-dark;
 }
 
+.indent {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 80px 50vw 0 50vw;
+  margin-bottom: -60px;
+  margin-top: -20px;
+  // border-style: inset;
+  &--primary {
+    border-color: transparent $primary transparent $primary;
+  }
+  &--gray-1 {
+    border-color: transparent $gray-1 transparent $gray-1;
+  }
+  &--gray-2 {
+    border-color: transparent $gray-2 transparent $gray-2;
+  }
+  &--gray-3 {
+    border-color: transparent $gray-3 transparent $gray-3;
+  }
+  &--gray-4 {
+    border-color: transparent $gray-4 transparent $gray-4;
+  }
+  &--dark {
+    border-color: transparent $dark transparent $dark;
+  }
+  &--white {
+    border-color: transparent #fff transparent #fff;
+  }
+}
 
 .triangle-with-shadow {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 16px 10px -17px rgba(0, 0, 0, 0.5);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 10px -17px rgba(0, 0, 0, 0.5);
+}
+.triangle-with-shadow:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #999;
+  transform: rotate(45deg); /* Prefixes... */
+  top: 75px;
+  left: 25px;
+  box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
+}
+
+.triangle {
+  position: relative;
+  padding: 1em;
+  box-sizing: border-box;
+  // background: #bada55;
+  box-shadow: 0px -3px 3px 0 rgba(0, 0, 0, 0.4);
+}
+.triangle::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-left: 0em;
+  top: 0em;
+  left: 0%;
+  box-sizing: border-box;
+
+  border-style: solid;
+  //   border: 2em solid black;
+  border-width: 0 20px 200px 0;
+  border-color: transparent #bada55 transparent transparent;
+
+  transform-origin: 0 0;
+  transform: rotate(0deg);
+
+  box-shadow: 3px -3px 3px 0 rgba(0, 0, 0, 0.4);
+}
+
+// divider
+
+.text-divider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // margin: 1em -1em;
+  h1 {
+    margin: 0 3rem;
   }
-  .triangle-with-shadow:after {
+  &::before,
+  &::after {
     content: "";
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: #999;
-    transform: rotate(45deg); /* Prefixes... */
-    top: 75px;
-    left: 25px;
-    box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
+    //   display: flex;
+    //   flex-grow: 1;
+    width: 30%;
+    height: 2px;
+    // margin: 0 1em;
+    border-radius: 70%;
+    background: #fff;
   }
-
-  .triangle {
-    position: relative;
-    padding: 1em;
-    box-sizing: border-box;
-    // background: #bada55;
-    box-shadow: 0px -3px 3px 0 rgba(0, 0, 0, 0.4);
+  &::before{
+    margin-left: -7%;
   }
-  .triangle::after{
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 0;
-      margin-left: 0em;
-      top: 0em;
-      left: 0%;
-      box-sizing: border-box;
-    
-      border-style: solid;
-    //   border: 2em solid black;
-      border-width: 0 20px 200px 0;
-      border-color: transparent #bada55 transparent transparent ;
-      
-      transform-origin: 0 0;
-      transform: rotate(0deg);
-      
-      box-shadow: 3px -3px 3px 0 rgba(0, 0, 0, 0.4);
-    }
+  &::after {
+    margin-right: -7%;
+  }
+}
 
 
-    .diamond4 {
-        border-style: solid;
-        border-color: transparent transparent #32557f transparent;
-        border-width: 0 25px 25px 25px;
-        height: 0;
-        width: 50px;
-        box-sizing: content-box;
-        position: relative;
-        margin: 20px 0 50px 0;
-      
-        &::after {
-          content: '';
-          position: absolute;
-          top: 25px;
-          left: -25px;
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-color: #32557f transparent transparent transparent;
-          border-width: 70px 50px 0 50px;
-        }
-      }
+.icon-fb-logo{
+    background-image: url("../img/icons/fb-logo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    height: 3rem;
+    width: 3rem;
+}

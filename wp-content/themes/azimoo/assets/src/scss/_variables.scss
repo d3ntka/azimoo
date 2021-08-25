@@ -12,6 +12,6 @@ $text-dark: #50525A;
 $navbar-dark-background: $gray-2;
 $navbar-dark-background-color: $gray-2;
 $navbar-dark-color: rgba(255,255,255, 1);
-$navbar-dark-hover-color: rgba(255,255,255, 0.8);
+$navbar-dark-hover-color: rgba($primary-light, 1);
 $navbar-dark-disabled-color: rgba(255,255,255, 0.3);
-$navbar-dark-active-color: rgba(255,255,255, 1);
+$navbar-dark-active-color: rgba($gray-1, 1);

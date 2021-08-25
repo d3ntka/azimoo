@@ -1,10 +1,64 @@
 .navbar{
     background-color: $gray-2;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    &__aux{
+        display: flex;
+        align-items: center;
+        ul{
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            li{
+                a{
+                    font-size: 1.4rem;
+                    color: $gray-1;
+                    padding: 0.4rem 0.5rem;
+                    line-height: 1;
+                    border: 1px solid $gray-1;
+                    margin-right: 3px;
+                    &:hover{
+                        color: $primary;
+                        border-color: $primary;
+                    }
+                }
+                &.current-lang{
+                    a{
+                        color: #fff;
+                        border-color: #fff;
+                    }
+                }
+            }
+        }
+    }
 }
 .navbar-nav{
+    & .menu-item{
+        display: flex;
+        align-items: center;
+        margin-left: 2rem;
+        @include media-breakpoint-down(md){
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+    }
     & .menu-item:last-child{
         a{
             color: $primary-light;
+        }
+    }
+    & .menu-item:not(:last-child){
+        &:after {
+            @include media-breakpoint-up(md){
+                content: "";
+                width: 2px;
+                height: 8rem;
+                margin-left: 2rem;
+                border-radius: 70%;
+                background: $gray-1;
+            }
         }
     }
 }
@@ -14,4 +68,35 @@
 
 .footer{
     background-color: $dark;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    &__title{
+        color: $gray-2;
+    }
+    a{
+        padding: 0;
+        color: #fff;
+        &:hover{
+            color: $primary-light;
+        }
+    }
+    &__logo{
+        margin: 4rem 0;
+    }
+    .nav{
+        display: block;
+    }
+    
+    &__copy{
+        color: $primary;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        padding: 3rem 0;
+    }
+    &__text{
+        @include media-breakpoint-down(md){
+            text-align: center;
+        }
+    }
 }

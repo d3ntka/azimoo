@@ -12,6 +12,7 @@
 	$navbar_position = get_theme_mod( 'navbar_position', 'static' ); // Get custom meta-value.
 
 	$search_enabled  = get_theme_mod( 'search_enabled', '1' ); // Get custom meta-value.
+	$options_fb = get_field( 'options_fb', 'options' ) ;
 ?>
 
 <body <?php body_class(); ?>>
@@ -23,7 +24,7 @@
 <div id="wrapper">
 	<header>
 		<nav id="header" class="navbar navbar-expand-md navbar-dark <?php if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
-			<div class="container">
+			<div class="container d-flex flex-row justify-content-between align-items-center">
 				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<?php
 						$header_logo = get_theme_mod( 'header_logo' ); // Get custom meta-value.
@@ -67,6 +68,14 @@
 						endif;
 					?>
 				</div><!-- /.navbar-collapse -->
+				<div class="navbar__aux">
+					<?php if ( $options_fb ) : ?>
+						<a target="_blank" href="<?php echo esc_url( $options_fb ); ?>">
+							<i class="icon-fb-logo"></i>
+						</a>
+					<?php endif; ?>
+					<ul><?php pll_the_languages();?></ul>
+				</div>
 			</div><!-- /.container -->
 		</nav><!-- /#header -->
 	</header>

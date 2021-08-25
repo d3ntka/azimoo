@@ -7,6 +7,7 @@
 
 get_header();
 
+$section_id = 0;
 
 if( have_rows('layouts') ):
 
