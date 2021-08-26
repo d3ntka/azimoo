@@ -8,6 +8,7 @@
 get_header();
 
 $section_id = 0;
+$box_id = 0;
 
 if( have_rows('layouts') ):
 
@@ -26,6 +27,10 @@ if( have_rows('layouts') ):
         elseif( get_row_layout() == 'layouts_section' ):
             include( locate_template( '/components/section/section-vars.php', false, false ) );
             include( locate_template( '/components/section/section.php', false, false ) );
+ 
+        elseif( get_row_layout() == 'layouts_box' ):
+            include( locate_template( '/components/box/box-vars.php', false, false ) );
+            include( locate_template( '/components/box/box.php', false, false ) );
 
             
         endif;

@@ -1,5 +1,6 @@
+<section class="section">
 <div class="sections__shadow">
-<section class="section__main indent__<?=$indent?> bg-<?=$section_bg_color?>" id="section-<?=$section_id?>">
+<div class="section__main indent__<?=$indent?> bg-<?=$section_bg_color?>" id="section-<?=$section_id?>">
 
     <div class="section__cont">
     <div class="container">
@@ -42,6 +43,7 @@
         <?php endif; ?>
     </div>
     </div>
-</section>
 </div>
+</div>
+</section>
  <?php $section_id++ ;?>
