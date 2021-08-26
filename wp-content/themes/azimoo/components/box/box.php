@@ -36,8 +36,14 @@
                                     ?>
                                     <li class="glide__slide">
                                         <div class="slider__img" style="background-image: url('<?=$image['url']; ?>')">
-                                            AZIMOO box <?=$image['title']; ?>
-                                            <?=$image['caption']; ?>
+                                            <div class="box__slider--text">
+                                                <div class="box__slider--name">
+                                                    AZIMOO <i>box</i> <?=$box_title?>
+                                                </div>
+                                                <div class="box__slider--caption">
+                                                    <?=$image['caption']; ?>
+                                                </div>
+                                            </div>
                                         </div>
                                     </li>
                                     <?php endforeach; ?>
@@ -46,20 +52,26 @@
                         </div>
                         <?php endif; ?>
 
-                        <div>
-                            Dysponujemy xxx możliwościami aranżacji unitu
-
-                        </div>
+                        <?php if ( $box_unit_arr = get_sub_field( 'box_unit_arr' ) ) : ?>
+                            <div class="box__arrangments">
+                                <?php 
+                                _e('Dysponujemy'. " ".$box_unit_arr." ".'możliwościami aranżacji przestrzeni unitu.') ; ?>
+                            </div>
+                        <?php endif; ?>
 
                         <div>
                             <?php if ( have_rows( 'box_colored_btns' ) ) : ?>
-                            <div class="row">
+                            <div class="row box__colored-btn--cont">
                                 <?php while ( have_rows( 'box_colored_btns' ) ) :
-                                the_row(); ?>
-
-                                <?php if ( $box_colored_btn = get_sub_field( 'box_colored_btn' ) ) : ?>
-                                <div class="col">
-                                    <?php echo esc_html( $box_colored_btn ); ?>
+                                the_row(); 
+                                $box_colored_btn = get_sub_field( 'box_colored_btn' );
+                                $box_colored_btn_clr = get_sub_field( 'box_colored_btn_clr' );
+                                ?>
+                                <?php if ( $box_colored_btn ) : ?>
+                                <div class="col-sm">
+                                    <div class="box__colored-btn" style="background-color:<?=$box_colored_btn_clr?>">
+                                        <?php echo esc_html( $box_colored_btn ); ?>
+                                    </div>
                                 </div>
                                 <?php endif; ?>
 
@@ -79,24 +91,28 @@
                         </div>
                         <?php endif; ?>
 
-                        <p>AZIMOO box <?php echo ( $box_title ); ?> jest kompatybilny z poniższymi podwoziami:</p>
-
-
+                        
+                        
                         
                         <?php if ( have_rows( 'box_chassis' ) ) : ?>
+                            <div class="box__chassis--compat">
+                                <?php _e("<b>AZIMOO box</b>"." ".$box_title." "."<b>jest kompatybilny z poniższymi podwoziami:</b>"); ?>
+                            </div>
                             <div class="box__chassis">
-                                <div class="row">
+                                <div class="row g-0">
 
                                 <?php while ( have_rows( 'box_chassis' ) ) :
                                     the_row(); ?>
-                                    <div class="col">
+                                    <div class="col-md box__chassis--cont">
                                         <?php if ( $chassis_manufacturer = get_sub_field( 'chassis_manufacturer' ) ) : ?>
-                                            <div class="box__chassis--manufacturer">
+                                            <a class="box__chassis--manufacturer collapsed" data-bs-toggle="collapse" href="#<?php echo esc_html( $chassis_manufacturer ); ?>" aria-expanded="false">
                                                 <?php echo esc_html( $chassis_manufacturer ); ?>
-                                            </div>
+                                            </a>
                                         <?php endif; ?>
 
                                         <?php if ( have_rows( 'chassis_models' ) ) : ?>
+                                            <div class="collapse" id="<?php echo esc_html( $chassis_manufacturer ); ?>">
+
                                             <?php while ( have_rows( 'chassis_models' ) ) :
                                                 the_row(); ?>
                                                 
@@ -107,6 +123,8 @@
                                                 <?php endif; ?>
 
                                             <?php endwhile; ?>
+                                            </div>
+
                                         <?php endif; ?>
                                     
                                     </div>

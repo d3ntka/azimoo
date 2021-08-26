@@ -7,6 +7,9 @@
     &__aux{
         display: flex;
         align-items: center;
+        @include media-breakpoint-down(lg){
+            margin-bottom: 3rem;
+        }
         ul{
             display: flex;
             list-style-type: none;
@@ -39,9 +42,10 @@
         display: flex;
         align-items: center;
         margin-left: 2rem;
-        @include media-breakpoint-down(md){
+        @include media-breakpoint-down(lg){
             padding-top: 2rem;
             padding-bottom: 2rem;
+            margin-left: 0rem;
         }
     }
     & .menu-item:last-child{
@@ -51,7 +55,7 @@
     }
     & .menu-item:not(:last-child){
         &:after {
-            @include media-breakpoint-up(md){
+            @include media-breakpoint-up(lg){
                 content: "";
                 width: 2px;
                 height: 8rem;
@@ -63,7 +67,12 @@
     }
 }
 
-
+.navbar-toggler.collapsed ~ .navbar__aux{
+    @include media-breakpoint-down(lg){
+        display: none;
+        // height: 0;
+    }
+}
 
 
 .footer{

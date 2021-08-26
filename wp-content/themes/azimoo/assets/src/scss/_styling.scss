@@ -45,6 +45,14 @@ a {
   font-weight: 700;
 }
 
+.centered{
+  text-align: center;
+  display: block;
+}
+.italic{
+  font-style: italic;
+}
+
 // $inset-w: calc(50vw-20rem);
 .bg-primary {
   background-color: $primary;
@@ -163,10 +171,11 @@ a {
     //   display: flex;
     //   flex-grow: 1;
     width: 30%;
-    height: 2px;
+    height: 3px;
     // margin: 0 1em;
-    border-radius: 70%;
+    border-radius: 90%;
     background: #fff;
+    // filter: blur(1px);
   }
   &::before{
     margin-left: -7%;

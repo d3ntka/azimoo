@@ -31,6 +31,10 @@ if( have_rows('layouts') ):
         elseif( get_row_layout() == 'layouts_box' ):
             include( locate_template( '/components/box/box-vars.php', false, false ) );
             include( locate_template( '/components/box/box.php', false, false ) );
+ 
+        elseif( get_row_layout() == 'layouts_contact' ):
+            include( locate_template( '/components/contact/contact-vars.php', false, false ) );
+            include( locate_template( '/components/contact/contact.php', false, false ) );
 
             
         endif;

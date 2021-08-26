@@ -11,11 +11,17 @@
 
 
 .slider__img{
-    height: 70rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
+    height: 70rem;
+    @include media-breakpoint-down(lg){
+        height: 40rem;
+    }
+    @include media-breakpoint-down(sm){
+        height: 30rem;
+    }
 }
 
 .glide{
@@ -82,9 +88,13 @@
         background-position: center;
         background-image: url("../img/cover.jpg");
     }
+    &__hotspots{
+        margin-top: 3rem;
+    }
 }
 
 .box{
+    line-height: 1.5;
     &__main{
     // padding-top: 40px;
     }
@@ -95,14 +105,171 @@
     &__title{
         padding-bottom: 3rem;
     }
+    &__slider{
+        &--text{
+            color: $dark;
+            line-height: 1.5;
+            padding-top: 2rem;
+            padding-left: 2rem;
+        }
+        &--name{
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        &--caption{
+            font-weight: 800;
+            font-size: 3rem;
+        }
+    }
+    .glide{
+        box-shadow: 0 0 6px rgba($dark, 0.8);
+        margin-bottom: 3rem;
+    }
+    .glide__slide{
+        background-color: #fff;
+        height: 70rem;
+        @include media-breakpoint-down(lg){
+            height: 40rem;
+        }
+        @include media-breakpoint-down(sm){
+            height: 30rem;
+        }
+    }
+    .slider__img{
+        height: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+    }
+    &__arrangments{
+        margin-bottom: 3rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+    &__colored-btn{
+        &--cont{
+            margin-bottom: 2rem;
+        }
+        text-align: center;
+        padding: 1rem;
+        color: $dark;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
     &__chassis{
+        &--compat{
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+            font-size: 1.6rem;
+        }
+        &--cont{
+            // &:not(:last-child){
+            //     border-right: 1px solid $primary-light;
+            // }
+        }
         &--manufacturer{
             background-color: $primary;
             color: #fff;
+            font-size: 2.4rem;
+            font-weight: 700;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-right: 1px solid $primary-light;
+            border-bottom: 1px solid $primary-light;
+
+
+            &::before{
+                position: absolute;
+                content: "";
+                width: 1px;
+                height: 85%;
+                background-color: rgba(#fff,0.3);
+                right: 4rem;
+            }
+            &:hover{
+                color: #fff;
+            }
+            &::after{
+                position: absolute;
+                border-bottom: 0;
+                border-left: 0.8rem solid transparent;
+                border-right: 0.8rem solid transparent;
+                border-top: 1.5rem solid;
+                content: "";
+                transition: 0.3s ease;
+                // display: inline-block;
+                right: 1.2rem;
+            }
+            &.collapsed{
+                &::after{
+                    transform: rotate(180deg);
+                }
+            }
         }
         &--model{
             background-color: #fff;
             color: $dark;
+            border-right: 1px solid $primary-light;
+            border-bottom: 1px solid $primary-light;
+            text-align: center;
+            padding: 1rem;
         }
+    }
+}
+
+
+
+.contact{
+    &__info{
+        a{
+            color: #fff;
+            &:hover{
+                color: $primary-light;
+            }
+        }
+    }
+}
+
+.wpcf7-form{
+    margin-left: auto;
+    margin-right: auto;
+    label{
+        width: 100%;
+    }
+    button, input, optgroup, select, textarea {
+        width: 100%;
+    }
+    .wpcf7-form-control{
+        color: #fff;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        transition: 0.3s ease;
+        &:hover{
+            border-bottom: 1px solid $primary;
+        }
+        &:focus, &:active{
+            border: 1px solid $primary-light;
+        }
+        
+    }
+    .wpcf7-submit{
+        border: 1px solid $primary;
+        background-color: $primary;
+        padding: 1rem 3rem;
+        &:hover{
+            border: 1px solid $primary-light;
+            background-color: $primary-light;
+            color: #fff;
+        }
+    }
+    textarea{
+        height: 15rem;
     }
 }

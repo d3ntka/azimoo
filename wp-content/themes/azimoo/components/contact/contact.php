@@ -1,4 +1,4 @@
-<section class="section">
+<section class="contact">
 <div class="sections__shadow">
 <div class="section__main indent__<?=$indent?> bg-<?=$section_bg_color?>" id="section-<?=$section_id?>">
 
@@ -25,22 +25,30 @@
             </div>
         <?php endif; ?>
 
-        <?php if (($section_add_imgs == 'true' ) && ( $section_imgs )) : ?>
-            <div class="row justify-content-between section__imgs">
-                <?php foreach( $section_imgs as $image ) : ?>
-                    <div class="col-12 col-lg d-flex justify-content-center section__imgs--img">
-                        <a href="<?php echo esc_url( $image['url'] ); ?>">
-                            <img class="img-fluid" src="<?php echo esc_url( $image['sizes']['large'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>"/>
-                        </a>
+        <div class="row justify-content-center align-items-center contact__info">
+            <div class="col-md-5 d-flex justify-content-center">
+                <div>
+                    <div>
+                    <?php if ( $options_address = get_field( 'options_address', 'options' )) : ?>
+                        <?php echo $options_address; ?>
+                    <?php endif; ?>
                     </div>
-                <?php endforeach; ?>
+                    <br>
+                    <div>
+                        <?php if ( $options_footer_contact = get_field( 'options_footer_contact', 'options' )) : ?>
+                            <?php echo $options_footer_contact; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
             </div>
-        <?php endif; ?>
-        <?php if (($section_add_hotspots == 'true' ) && ( $section_hotspots )) : ?>
-            <div class="row justify-content-center section__hotspots">
-                <?php echo do_shortcode( $section_hotspots ); ?>
+            <div class="col-md-5">
+                <?php if (($section_add_hotspots == 'true' ) && ( $section_hotspots )) : ?>
+                    <div class="row justify-content-center section__hotspots">
+                        <?php echo do_shortcode( $section_hotspots ); ?>
+                    </div>
+                <?php endif; ?>
             </div>
-        <?php endif; ?>
+        </div>
     </div>
     </div>
 </div>
