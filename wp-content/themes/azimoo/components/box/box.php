@@ -49,6 +49,10 @@
                                     <?php endforeach; ?>
                                 </ul>
                             </div>
+                            <div class="glide__arrows" data-glide-el="controls">
+                                <button class="glide__arrow--mod glide__arrow--left" data-glide-dir="<"><span class="chevron chevron__left bg-<?=$box_bg_color?>"></span></button>
+                                <button class="glide__arrow--mod glide__arrow--right" data-glide-dir=">"><span class="chevron chevron__right bg-<?=$box_bg_color?>"></span></button>
+                            </div>
                         </div>
                         <?php endif; ?>
 

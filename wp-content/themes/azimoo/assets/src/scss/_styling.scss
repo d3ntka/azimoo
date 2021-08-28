@@ -203,3 +203,37 @@ a {
 .no-margin{
   margin-top: -2rem;
 }
+.glide__arrow--mod{
+  display: block;
+  line-height: 1;
+  opacity: 1;
+  padding: 9px 12px;
+  position: absolute;
+  background-color: transparent;
+  border: 2px solid transparent;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity .15s ease,border .3s ease-in-out;
+  z-index: 2;
+  span{
+    transition: 0.3s ease;
+  }
+  &:hover{
+    span{
+      background-color: $primary;
+    }
+  }
+}
+
+.chevron{
+  height: 17rem;
+  width: 3.3rem;
+  display: block;
+}
+.chevron__right{
+  // clip-path: polygon(0 0, 100% 60%, 0 100%, 0 85%, 60% 60%, 0 20%);
+  clip-path: polygon(0 0, 100% 60%, 0 100%, 0 91%, 75% 60%, 0 11%);
+}
+.chevron__left{
+  clip-path: polygon(100% 11%, 25% 60%, 100% 91%, 100% 100%, 0 60%, 100% 0);
+}
