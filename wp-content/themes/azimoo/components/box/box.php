@@ -1,10 +1,10 @@
 <section class="box">
 
-    <?php if ($indent != 'none') :?>
-        <div class="sections__shadow">
-    <?php else :?>
-        <div>
-    <?php endif ?>
+<?php if ($indent != 'none') :?>
+    <div class="sections__shadow">
+<?php else :?>
+    <div class="no-margin">
+<?php endif ?>
 
             <div class="box__main indent__<?=$indent?> bg-<?=$box_bg_color?>" id="box-<?=$box_id?>">
 
@@ -105,13 +105,13 @@
                                     the_row(); ?>
                                     <div class="col-md box__chassis--cont">
                                         <?php if ( $chassis_manufacturer = get_sub_field( 'chassis_manufacturer' ) ) : ?>
-                                            <a class="box__chassis--manufacturer collapsed" data-bs-toggle="collapse" href="#<?php echo esc_html( $chassis_manufacturer ); ?>" aria-expanded="false">
+                                            <a class="box__chassis--manufacturer collapsed" data-bs-toggle="collapse" href="#<?php echo esc_html( $chassis_manufacturer."-".$box_id ); ?>" aria-expanded="false">
                                                 <?php echo esc_html( $chassis_manufacturer ); ?>
                                             </a>
                                         <?php endif; ?>
 
                                         <?php if ( have_rows( 'chassis_models' ) ) : ?>
-                                            <div class="collapse" id="<?php echo esc_html( $chassis_manufacturer ); ?>">
+                                            <div class="collapse" id="<?php echo esc_html( $chassis_manufacturer."-".$box_id ); ?>">
 
                                             <?php while ( have_rows( 'chassis_models' ) ) :
                                                 the_row(); ?>

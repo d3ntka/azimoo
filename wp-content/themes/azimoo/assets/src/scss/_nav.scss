@@ -23,8 +23,8 @@
                     border: 1px solid $gray-1;
                     margin-right: 3px;
                     &:hover{
-                        color: $primary;
-                        border-color: $primary;
+                        color: $primary-light;
+                        border-color: $primary-light;
                     }
                 }
                 &.current-lang{

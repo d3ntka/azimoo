@@ -8,7 +8,7 @@ body {
   font-size: 1.4rem;
   overflow-x: hidden;
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  // font-family: "Roboto", sans-serif;
   background-color: $gray-1;
   line-height: 1.7;
   letter-spacing: 0.02em;
@@ -17,7 +17,7 @@ body {
 h1 {
   @include rfs(3.2rem);
   text-align: center;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h2 {
@@ -184,7 +184,12 @@ a {
     margin-right: -7%;
   }
 }
-
+.text-divider--dark{
+  &::before,
+  &::after {
+    background: $dark;
+  }
+}
 
 .icon-fb-logo{
     background-image: url("../img/icons/fb-logo.svg");
@@ -193,4 +198,8 @@ a {
     display: block;
     height: 3rem;
     width: 3rem;
+}
+
+.no-margin{
+  margin-top: -2rem;
 }

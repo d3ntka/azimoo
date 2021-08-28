@@ -1,5 +1,10 @@
 <section class="section">
-<div class="sections__shadow">
+<?php if ($indent != 'none') :?>
+    <div class="sections__shadow">
+<?php else :?>
+    <div class="no-margin">
+<?php endif ?>
+
 <div class="section__main indent__<?=$indent?> bg-<?=$section_bg_color?>" id="section-<?=$section_id?>">
 
     <div class="section__cont">
@@ -7,7 +12,7 @@
         <?php if ( $section_title = get_sub_field( 'section_title' ) ) : ?> 
             <!-- <div class="row justify-content-center"> -->
                 <!-- <div class="col-auto"> -->
-                    <div class="section__title text-divider">
+                    <div class="section__title text-divider <?php if ($section_bg_color == 'white') : echo("text-divider--dark"); endif?>">
                         <h1>
                             <?php echo ( $section_title ); ?> 
                         </h1>
@@ -24,8 +29,8 @@
                 </div>
             </div>
         <?php endif; ?>
-
-        <?php if (($section_add_imgs == 'true' ) && ( $section_imgs )) : ?>
+        <?php 
+        if (($section_add_imgs == 'true' ) && ( $section_imgs )) : ?>
             <div class="row justify-content-between section__imgs">
                 <?php foreach( $section_imgs as $image ) : ?>
                     <div class="col-12 col-lg d-flex justify-content-center section__imgs--img">
@@ -36,6 +41,7 @@
                 <?php endforeach; ?>
             </div>
         <?php endif; ?>
+
         <?php if (($section_add_hotspots == 'true' ) && ( $section_hotspots )) : ?>
             <div class="row justify-content-center section__hotspots">
                 <?php echo do_shortcode( $section_hotspots ); ?>
