@@ -65,6 +65,9 @@
 }
 
 .section{
+    ul li::marker {
+        content: "▶";
+    }
     &__main{
     // padding-top: 40px;
     }
@@ -86,7 +89,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url("../img/cover.jpg");
+        background-image: url("../img/wzor.png");
     }
     &__hotspots{
         margin-top: 3rem;

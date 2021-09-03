@@ -15,7 +15,7 @@
                         <!-- <div class="col-auto"> -->
                         <div class="box__title text-divider">
                             <h1>
-                                AZIMOO <i>box</i>
+                                AZIMOO <i>BOX</i>
                                 <?php echo ( $box_title ); ?>
                             </h1>
                         </div>
@@ -38,7 +38,7 @@
                                         <div class="slider__img" style="background-image: url('<?=$image['url']; ?>')">
                                             <div class="box__slider--text">
                                                 <div class="box__slider--name">
-                                                    AZIMOO <i>box</i> <?=$box_title?>
+                                                    AZIMOO <i>BOX</i> <?=$box_title?>
                                                 </div>
                                                 <div class="box__slider--caption">
                                                     <?=$image['caption']; ?>
@@ -100,7 +100,7 @@
                         
                         <?php if ( have_rows( 'box_chassis' ) ) : ?>
                             <div class="box__chassis--compat">
-                                <?php _e("<b>AZIMOO box</b>"." ".$box_title." "."<b>jest kompatybilny z poniższymi podwoziami:</b>"); ?>
+                                <?php _e("<b>AZIMOO BOX</b>"." ".$box_title." "."<b>jest kompatybilny między innymi z poniższymi podwoziami:</b>"); ?>
                             </div>
                             <div class="box__chassis">
                                 <div class="row g-0">

@@ -36,7 +36,7 @@
 								Menu name taken from functions.php!!! ... register_nav_menu( 'footer-menu', 'Footer Menu' );
 								!!! IMPORTANT: After adding all pages to the menu, don't forget to assign this menu to the Footer menu of "Theme locations" /wp-admin/nav-menus.php (on left side) ... Otherwise the themes will not know, which menu to use!!!
 							*/
-							echo '<div class="col-md-4 col-lg-3 d-flex justify-content-center">';
+							echo '<div class="col-md-4 col-lg-3 d-flex justify-content-center pt-4">';
 
 							echo '<div><div class="footer__title">';
 							_e( 'Mapa strony', 'azimoo' );
@@ -56,7 +56,7 @@
 						endif;
 
 					?>
-					<div class="col-md-4 col-lg-3 d-flex justify-content-center">
+					<div class="col-md-4 col-lg-3 d-flex justify-content-center pt-4">
 						<div>
 							<div class="footer__title"><?php _e( 'Skontaktuj się z nami', 'azimoo' ); ?></div>
 							<div>
@@ -66,7 +66,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 col-lg-3 d-flex justify-content-center">
+					<div class="col-md-4 col-lg-3 d-flex justify-content-center pt-4">
 						<div>
 						<div class="footer__title"><?php _e( 'Tutaj jesteśmy', 'azimoo' ); ?></div>
 						<div>
@@ -80,7 +80,7 @@
 				<div class="row justify-content-center footer__copy">
 					<div class="col-md-auto d-flex justify-content-center">
 						<div><?php _e( 'AZIMOO expedition vehicles wykonane na zamowienie', 'azimoo' ); ?> <br>
-						<?php _e( 'Wszytkie prawa zastrzeżone.', 'azimoo' ); ?></div>
+						<?php _e( 'Wszystkie prawa zastrzeżone.', 'azimoo' ); ?></div>
 					</div>
 				</div>
 			</div><!-- /.container -->
