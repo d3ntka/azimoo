@@ -5,7 +5,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'col-sm-12' ); ?>>
-	<div class="card mb-4">
+	<div class="card box-highlight-wrap">
+		<div class="box-highlight"></div>
+		<div class="box-highlight2"></div>
 	<div class="news__tags">
 		<?php
 			/* translators: used between list items, there is a space after the comma */
@@ -64,7 +66,7 @@
 					<!-- <div class="col-md-3"> -->
 					<div class="row news__gallery news__gallery--archive" id="news-gallery-<?php the_ID(); ?>">
 						<?php foreach( $posts_gallery as $image ) : ?>
-							<a class="col-md-6 col-xl-3" href="<?php echo esc_url( $image['url'] ); ?>">
+							<a class="col-md-6 col-xl-3" href="<?php the_permalink(); ?>">
 							<div>
 								<img src="<?php echo esc_url( $image['sizes']['medium'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>"/>
 
@@ -79,7 +81,7 @@
 				<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . esc_html__( 'Pages:', 'azimoo' ) . '</span>', 'after' => '</div>' ) ); ?>
 			</div><!-- /.card-text -->
 			<footer class="entry-meta">
-				<a href="<?php echo get_the_permalink(); ?>" class="btn btn-outline-secondary"><?php esc_html_e( 'more', 'azimoo' ); ?></a>
+				<!-- <a href="<?php echo get_the_permalink(); ?>" class="btn btn-outline-secondary"><?php esc_html_e( 'more', 'azimoo' ); ?></a> -->
 			</footer><!-- /.entry-meta -->
 		</div><!-- /.card-body -->
 	</div><!-- /.col -->

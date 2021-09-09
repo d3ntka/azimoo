@@ -378,6 +378,7 @@
         background-color: transparent;
         border: none;
         border-radius: 0;
+        padding: 0 1rem;
     }
     h2{
         a{
@@ -462,7 +463,11 @@
     &__gallery{
         // display: flex;
         & a{
-            margin-bottom: 1.5rem;
+            // margin-bottom: 1.5rem;
+            transition: .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            &:hover{
+                filter: brightness(1.2);
+            }
             &>div{
                 position: relative;
                 width: 100%;
@@ -477,12 +482,101 @@
                 height: 100%;
             }
         }
-        &--archive a:nth-child(n+5){
-            display: none;
-        }
+        &--archive{
+            a:nth-child(n+5){
+                display: none;
+            }
+            &>a{
+                padding: 1.5rem;
+            }
+        } 
     }
 
 }
+.box-highlight-wrap{
+    position: relative;
+    overflow: hidden;
+}
+.box-highlight::before,
+.box-highlight::after{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 15rem;
+    background-color: #fff;
+    border-radius: 80%;
+}
+
+.box-highlight::before{
+    left:0;
+    bottom:0;
+    transform: translateY(50%);
+}
+.box-highlight::after{
+    right:0;
+    bottom:0;
+    transform: translateY(50%);
+}
+
+
+.box-highlight2::before,
+.box-highlight2::after{
+    position: absolute;
+    content: '';
+    width: 15rem;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 80%;
+}
+
+.box-highlight2::before{
+    left:0;
+    bottom:0;
+    transform: translateX(-50%);
+}
+.box-highlight2::after{
+    right:0;
+    bottom:0;
+    transform: translateX(50%);
+}
+
+.blog{
+    .post{
+        margin-bottom: 7rem;
+    }
+    .news__tags{
+        padding: 1rem 0;
+        font-weight: 500;
+    }
+    .card-title{
+        font-weight: 700;
+    }
+    p{
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+}
+// .box-highlight::before,
+// .box-highlight::after{
+//     position: absolute;
+//     content: '';
+//     width: 5rem;
+//     height: 5rem;
+// }
+
+// .box-highlight::before{
+//     left:0;
+//     bottom:0;
+//     border-left:3px solid #fff;
+//     border-bottom:3px solid #fff;
+
+// }
+// .box-highlight::after{
+//     right:0;
+//     bottom:0;
+//     border-right:3px solid #fff;
+//     border-bottom:3px solid #fff;
+// }
 
 
 .wp-block-image figcaption {
