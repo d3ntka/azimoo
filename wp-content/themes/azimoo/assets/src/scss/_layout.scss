@@ -89,7 +89,7 @@
     }
 
     &__bg{
-        background-size: contain;
+        background-size: 100%;
         background-repeat: no-repeat;
         // background-position: center;
         background-image: url("../img/wzor.png");
@@ -368,7 +368,8 @@
 // POSTY
 .archive__bg{
     background-color: $gray-4;
-    background-size: contain;
+    // background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
     // background-position: 20%;
     background-image: url("../img/wzor.png");
