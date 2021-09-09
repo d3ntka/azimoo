@@ -9,7 +9,7 @@ body {
   overflow-x: hidden;
   color: #fff;
   // font-family: "Roboto", sans-serif;
-  background-color: $gray-1;
+  background-color: $gray-4;
   line-height: 1.7;
   letter-spacing: 0.02em;
 }
@@ -17,7 +17,7 @@ body {
 h1 {
   @include rfs(3.2rem);
   text-align: center;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h2 {
@@ -109,7 +109,12 @@ a {
 }
 
 .columns{
-  columns: 2;
+  columns: 350px 2;
+  margin-left: 5%;
+  margin-right: 5%;
+  li{
+    padding-left: 1rem;
+  }
 }
 
 .triangle-with-shadow {

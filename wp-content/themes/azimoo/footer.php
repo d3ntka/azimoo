@@ -2,6 +2,9 @@
 				$options_footer_logo = get_field( 'options_footer_logo', 'options' );
 				$options_footer_contact = get_field( 'options_footer_contact', 'options' );
 				$options_address = get_field( 'options_address', 'options' );
+				$options_form_url = get_field( 'options_form_url', 'options' );
+				$link = get_field( 'options_form_url', 'options' );
+
 				// If Single or Archive (Category, Tag, Author or a Date based page).
 				if ( is_single() || is_archive() ) :
 			?>
@@ -17,6 +20,7 @@
 			?>
 		</main><!-- /#main -->
 		<footer id="footer" class="footer">
+		<button id="scrollToTopBtn"><span class="gg-chevron-up"></span></button>
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-auto">
@@ -57,8 +61,19 @@
 
 					?>
 					<div class="col-md-4 col-lg-3 d-flex justify-content-center pt-4">
-						<div>
+						<div class="footer__contact">
 							<div class="footer__title"><?php _e( 'Skontaktuj się z nami', 'azimoo' ); ?></div>
+
+
+							<?php
+							if ( $link ) :
+								$link_url = $link['url'];
+								$link_title = $link['title'];
+								$link_target = $link['target'] ? $link['target'] : '_self';
+								?>
+								<a class="form-btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+							<?php endif; ?>
+							<!-- <a href="#" class="form-btn">Napisz</a> -->
 							<div>
 							<?php if ( $options_footer_contact ) : ?>
 								<?php echo $options_footer_contact; ?>

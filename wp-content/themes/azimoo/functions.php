@@ -515,7 +515,10 @@ function azimoo_scripts_loader() {
 
 	// 2. Scripts.
 	wp_enqueue_script( 'mainjs', get_template_directory_uri() . '/assets/js/main.bundle.js', array(), $theme_version, true );
-	wp_enqueue_script( 'glidejs', get_template_directory_uri() . '/assets/js/glide.min.js', array(), $theme_version, false );
+	wp_enqueue_script( 'glidejs', get_template_directory_uri() . '/assets/js/plugins/glide.min.js', array(), $theme_version, false );
+	wp_enqueue_script( 'headerjs', get_template_directory_uri() . '/assets/js/header.bundle.js', array(), $theme_version, false );
+	wp_enqueue_script( 'lightgalleryjs', get_template_directory_uri() . '/assets/js/plugins/lightgallery.min.js', array(), $theme_version, false );
+	wp_enqueue_script( 'lgthumbnailjs', get_template_directory_uri() . '/assets/js/plugins/lg-thumbnail.min.js', array(), $theme_version, false );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -33,12 +33,12 @@
                         <?php echo $options_address; ?>
                     <?php endif; ?>
                     </div>
-                    <br>
+                    <!-- <br>
                     <div>
                         <?php if ( $options_footer_contact = get_field( 'options_footer_contact', 'options' )) : ?>
                             <?php echo $options_footer_contact; ?>
                         <?php endif; ?>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-md-5">

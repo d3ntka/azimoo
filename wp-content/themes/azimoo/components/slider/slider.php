@@ -1,11 +1,15 @@
 <!-- slider -->
 <?php
-$slider_imgs = get_sub_field( 'slider_imgs' );
+// $slider_imgs = get_sub_field( 'slider_imgs' );
+if (get_sub_field( 'slider_imgs' )):
+  $slider_imgs = get_sub_field( 'slider_imgs' );
+else:
+  $slider_imgs = get_field( 'options_slider_imgs', 'options');
+endif;
 $i=0;
 
-
-	
 if ( $slider_imgs ) : ?>
+
 <section class="slider">
 <div class="glide" id="hero-slider">
   <div class="glide__track" data-glide-el="track">

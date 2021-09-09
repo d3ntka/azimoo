@@ -1,5 +1,10 @@
 // Webpack Imports
 import * as bootstrap from 'bootstrap';
+// import Tobii from '@midzer/tobii';
+import lightGallery from 'lightgallery';
+
+// Plugins
+import lgThumbnail from 'lightgallery/plugins/thumbnail'
 
 ( function () {
 	'use strict';
@@ -22,5 +27,21 @@ import * as bootstrap from 'bootstrap';
 			trigger: 'focus',
 		} );
 	} );
+	
+	// const tobii = new Tobii();
+	// lightGallery(document.getElementById('lightgallery'), {
+    //     plugins: [lgThumbnail],
+    //     speed: 500,
+    // });
 
+	var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+	var rootElement = document.documentElement;
+	function scrollToTop() {
+		// Scroll to top logic
+		rootElement.scrollTo({
+		  top: 0,
+		  behavior: "smooth"
+		})
+	  };
+	scrollToTopBtn.addEventListener("click", scrollToTop);
 } )();
