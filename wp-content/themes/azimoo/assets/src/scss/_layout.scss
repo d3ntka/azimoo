@@ -68,9 +68,6 @@
 }
 
 .section{
-    ul li::marker {
-        content: "▶";
-    }
     &__main{
     // padding-top: 40px;
     }
@@ -361,6 +358,9 @@
             }
         }
     }
+}
+.glide__bullets--tepui{
+    bottom: -2rem;
 }
 
 

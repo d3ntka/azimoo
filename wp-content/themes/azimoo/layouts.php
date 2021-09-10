@@ -36,6 +36,10 @@ if( have_rows('layouts') ):
             include( locate_template( '/components/contact/contact-vars.php', false, false ) );
             include( locate_template( '/components/contact/contact.php', false, false ) );
 
+        elseif( get_row_layout() == 'layouts_tepui_section' ):
+            include( locate_template( '/components/tepui/tepui-section-vars.php', false, false ) );
+            include( locate_template( '/components/tepui/tepui-section.php', false, false ) );
+    
         elseif( get_row_layout() == 'layouts_tepui_gallery' ):
             get_template_part( '/components/tepui/tepui_gallery');
 

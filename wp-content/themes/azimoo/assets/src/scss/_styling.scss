@@ -115,6 +115,9 @@ a {
   li{
     padding-left: 1rem;
   }
+  li::marker {
+    content: "▶";
+  }
 }
 
 .triangle-with-shadow {
