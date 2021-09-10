@@ -435,6 +435,13 @@
     .btn-back{
         margin-top: 2rem;
     }
+    .news{
+        &__gallery{
+            a{
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
 }
 .btn-clear{
     border: none;

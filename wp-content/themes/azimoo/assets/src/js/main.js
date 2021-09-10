@@ -1,10 +1,10 @@
 // Webpack Imports
 import * as bootstrap from 'bootstrap';
-// import Tobii from '@midzer/tobii';
-import lightGallery from 'lightgallery';
+import Tobii from '@midzer/tobii';
+// import lightGallery from 'lightgallery';
 
 // Plugins
-import lgThumbnail from 'lightgallery/plugins/thumbnail'
+// import lgThumbnail from 'lightgallery/plugins/thumbnail'
 
 ( function () {
 	'use strict';
@@ -28,11 +28,7 @@ import lgThumbnail from 'lightgallery/plugins/thumbnail'
 		} );
 	} );
 	
-	// const tobii = new Tobii();
-	// lightGallery(document.getElementById('lightgallery'), {
-    //     plugins: [lgThumbnail],
-    //     speed: 500,
-    // });
+
 
 	var scrollToTopBtn = document.getElementById("scrollToTopBtn");
 	var rootElement = document.documentElement;
@@ -44,4 +40,11 @@ import lgThumbnail from 'lightgallery/plugins/thumbnail'
 		})
 	  };
 	scrollToTopBtn.addEventListener("click", scrollToTop);
+} )();
+
+( function () {
+
+	const tobii = new Tobii({
+		// selector: ".lightbox_tobii"
+	});
 } )();

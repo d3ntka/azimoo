@@ -34,7 +34,7 @@
                 <div class="row justify-content-between section__imgs">
                     <?php foreach( $section_imgs as $image ) : ?>
                         <div class="col-12 col-lg d-flex justify-content-center section__imgs--img">
-                            <a href="<?php echo esc_url( $image['url'] ); ?>">
+                            <a href="<?php echo esc_url( $image['url'] ); ?>" class="lightbox" data-group="lb-<?=$section_id?>">
                                 <img class="img-fluid" src="<?php echo esc_url( $image['sizes']['large'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>"/>
                             </a>
                         </div>

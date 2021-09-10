@@ -361,7 +361,8 @@ body.admin-bar {
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
 // Lightbox
-// @import "node_modules/@midzer/tobii/src/scss/tobii";
+@import "node_modules/@midzer/tobii/src/scss/tobii";
+
 @import "node_modules/lightgallery/css/lightgallery-bundle.min";
 // @import "node_modules/lightgallery/css/lg-thumbnail";
 
