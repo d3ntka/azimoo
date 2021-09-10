@@ -55,11 +55,11 @@
                         </ul>
                     </div>
                     <div class="glide__bullets glide__bullets--tepui" data-glide-el="controls[nav]">
-                    <?php while ( have_rows( 'tepui_hotspot_slider' ) ) :
+                        <?php while ( have_rows( 'tepui_hotspot_slider' ) ) :
                                 the_row(); ?>
                             <button class="glide__bullet" data-glide-dir="=<?=$i;?>"></button>
                             <?php $i++ ;?>
-                            <?php endwhile; ?>
+                        <?php endwhile; ?>
                     </div>
                 </div>
             <?php endif; ?>

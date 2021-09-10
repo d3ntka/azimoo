@@ -327,8 +327,22 @@
                 }
             }
             &--desc{
-                padding: 3rem;
+                // padding: 3rem;
                 // border: 1px solid #fff;
+                table{
+                    // border-collapse: collapse;
+                    width: 100%;
+                    table-layout: fixed;
+                    tr{
+                        border-bottom: 1px solid $gray-3;
+                        td{
+                            padding: 1rem;
+                            &:last-child{
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

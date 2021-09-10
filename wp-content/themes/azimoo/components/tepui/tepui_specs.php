@@ -60,11 +60,31 @@ $indent = get_sub_field( 'indent' );
                         </div>
                     <?php endif; ?>
 
-                    <?php if ( $desc = get_sub_field( 'desc' ) ) : ?>
+                    <?php if ( have_rows( 'desc' ) ) : ?>
                         <div class="tepui__specs__table--desc">
-                            <?php echo $desc; ?>
-                        </div>
+                        <table>
+                            <tbody>
+                                    <?php while ( have_rows( 'desc' ) ) :
+                                        the_row(); ?>
+                                        <tr>
+                                            <?php if ( $table_name = get_sub_field( 'table_name' ) ) : ?>
+                                                <td>
+                                                    <?php echo esc_html( $table_name ); ?>
+                                                </td>
+                                            <?php endif; ?>
+    
+                                            <?php if ( $table_value = get_sub_field( 'table_value' ) ) : ?>
+                                                <td>
+                                                    <?php echo esc_html( $table_value ); ?>
+                                                </td>
+    
+                                            <?php endif; ?>
+                                        </tr>
 
+                                    <?php endwhile; ?>
+                                </tbody>
+                            </table>
+                        </div>
                     <?php endif; ?>
                     </div>
 
