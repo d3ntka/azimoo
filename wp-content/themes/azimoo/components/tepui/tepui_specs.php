@@ -53,7 +53,7 @@ $indent = get_sub_field( 'indent' );
 
                 <?php while ( have_rows( 'tepui_specs_table' ) ) :
                     the_row(); ?>
-                    <div class="col-lg tepui__specs__table">
+                    <div class="col-md-6 col-xl-4 tepui__specs__table">
                     <?php if ( $title = get_sub_field( 'title' ) ) : ?>
                         <div class="tepui__specs__table--title">
                             <?php echo esc_html( $title ); ?>
