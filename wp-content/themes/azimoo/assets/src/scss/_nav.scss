@@ -118,7 +118,7 @@
         text-align: center;
         padding: 0.5rem 3rem;
         background-color: $primary;
-        border: 1px solid rgba($primary-light,0.3);
+        border: none;
         cursor: pointer;
         transition: 0.3s ease;
         margin: 1rem 0;
@@ -162,10 +162,10 @@
 
 
 #scrollToTopBtn {
-    position: absolute;
-    right: 5%;
-    top: -13rem;
-    border: 1px solid rgba($primary-light,0.3);
+    position: fixed;
+    right: 3vw;
+    bottom: 5vh;
+    border: none;
     cursor: pointer;
     font-size: 16px;
     line-height: 48px;

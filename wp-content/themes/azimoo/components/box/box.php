@@ -6,7 +6,9 @@
     <div class="no-margin">
 <?php endif ?>
 
-            <div class="box__main indent__<?=$indent?> bg-<?=$box_bg_color?>" id="box-<?=$box_id?>">
+
+            <div class="box__main indent__<?=$indent?> bg-<?=$box_bg_color?>" id="box-<?php 
+                      echo sanitize_title($box_title); ?>">
 
                 <div class="box__cont">
                     <div class="container">

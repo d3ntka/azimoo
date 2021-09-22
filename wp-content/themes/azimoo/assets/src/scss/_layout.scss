@@ -227,6 +227,73 @@
             padding: 1rem;
         }
     }
+    &__list{
+        // display: none;
+        position: absolute;
+        // top: 10rem;
+        top: 0;
+        left: 0;
+        background-color: rgba($gray-4, 0.3);
+        width: 100vw;
+        font-weight: 500;
+        // @include media-breakpoint-down(lg){
+        //     top: 6.6rem;
+        // }
+        &--wrap{
+            position: relative;
+            z-index: 200;
+        }
+
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0;
+            li{
+                list-style-type: none;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                padding-top: 0.5rem;
+                padding-bottom: .5rem;
+                a{
+                    display: block;
+                    color: #fff;
+                    line-height: 1.3;
+                    &:hover{
+                        color: $primary;
+                    }
+                }
+                &:not(:first-child){
+                    margin-right: 4rem;
+                    @include media-breakpoint-down(lg){
+                        margin-right: 2rem;
+                    }
+                    &::before {
+                            content: "";
+                            width: 2px;
+                            height: 7rem;
+                            // margin-left: 4rem;
+                            margin-right: 4rem;
+                            border-radius: 70%;
+                            background: rgba(#fff,0.3);
+                            @include media-breakpoint-down(lg){
+                                margin-right: 2rem;
+                                height: 4rem;
+                            }
+                    }
+                }
+            }
+        }
+        &--title{
+            color: $dark;
+            margin-right: 5rem;
+            @include media-breakpoint-down(md){
+                display: none!important;
+            }
+        }
+    }
 }
 
 

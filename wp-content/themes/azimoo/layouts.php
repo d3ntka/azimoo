@@ -10,6 +10,8 @@ get_header();
 $section_id = 0;
 $box_id = 0;
 
+get_template_part('components/box/box-list');
+
 if( have_rows('layouts') ):
 
     while ( have_rows('layouts') ) : the_row();
