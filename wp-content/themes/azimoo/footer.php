@@ -96,7 +96,7 @@
 				</div><!-- /.row -->
 				<div class="row justify-content-center footer__copy">
 					<div class="col-md-auto d-flex justify-content-center">
-						<div><?php _e( 'AZIMOO expedition vehicles wykonane na zamowienie', 'azimoo' ); ?> <br>
+						<div><?php _e( 'AZIMOO expedition vehicles', 'azimoo' ); ?> <br>
 						<?php _e( 'Wszystkie prawa zastrzeżone.', 'azimoo' ); ?></div>
 					</div>
 				</div>
