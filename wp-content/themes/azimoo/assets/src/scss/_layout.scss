@@ -153,6 +153,12 @@
     &__colored-btn{
         &--cont{
             margin-bottom: 2rem;
+            transition: 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+            // overflow: hidden;
+            height: 100%;
+            &.hidden{
+                display: none;
+            }
         }
         text-align: center;
         padding: 1rem;
@@ -161,6 +167,7 @@
         font-weight: 700;
         margin-bottom: 1rem;
         transition: 0.3s ease;
+        height: inherit;
         &:hover{
             filter: brightness(110%);
         }
@@ -305,6 +312,9 @@
             &:hover{
                 color: $primary-light;
             }
+        }
+        &--address{
+            margin-top: 3rem;
         }
     }
 }

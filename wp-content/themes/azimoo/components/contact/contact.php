@@ -25,20 +25,14 @@
             </div>
         <?php endif; ?>
 
-        <div class="row justify-content-center align-items-center contact__info">
+        <div class="row justify-content-center contact__info">
             <div class="col-md-5 d-flex justify-content-center">
                 <div>
-                    <div>
+                    <div class="contact__info--address">
                     <?php if ( $options_address = get_field( 'options_address', 'options' )) : ?>
                         <?php echo $options_address; ?>
                     <?php endif; ?>
                     </div>
-                    <!-- <br>
-                    <div>
-                        <?php if ( $options_footer_contact = get_field( 'options_footer_contact', 'options' )) : ?>
-                            <?php echo $options_footer_contact; ?>
-                        <?php endif; ?>
-                    </div> -->
                 </div>
             </div>
             <div class="col-md-5">

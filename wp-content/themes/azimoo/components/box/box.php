@@ -7,8 +7,7 @@
 <?php endif ?>
 
 
-            <div class="box__main indent__<?=$indent?> bg-<?=$box_bg_color?>" id="box-<?php 
-                      echo sanitize_title($box_title); ?>">
+            <div class="box__main indent__<?=$indent?> bg-<?=$box_bg_color?>" id="box-<?=$box_id?>">
 
                 <div class="box__cont">
                     <div class="container">
@@ -30,6 +29,22 @@
                         <div class="glide" id="box-slider-<?=$box_id?>">
                             <div class="glide__track" data-glide-el="track">
                                 <ul class="glide__slides">
+                                    <?php if ($box_add_colored_img == 'true' ): ?>
+                                        <?php if ( $box_colored_img ) : ?>
+                                        <li class="glide__slide" id="slide__color-<?=$box_id?>">
+                                            <div class="slider__img" style="background-image: url('<?=$box_colored_img['url']; ?>')">
+                                                <div class="box__slider--text">
+                                                    <div class="box__slider--name">
+                                                        AZIMOO <i>BOX</i> <?=$box_title?>
+                                                    </div>
+                                                    <div class="box__slider--caption">
+                                                        <?=$box_colored_img['caption']; ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
                                     <?php foreach( $box_imgs as $image ) : 
                                     $url = $image['url'];
                                     $title = $image['title'];
@@ -65,26 +80,26 @@
                             </div>
                         <?php endif; ?>
 
-                        <div>
-                            <?php if ( have_rows( 'box_colored_btns' ) ) : ?>
-                            <div class="row box__colored-btn--cont">
-                                <?php while ( have_rows( 'box_colored_btns' ) ) :
-                                the_row(); 
-                                $box_colored_btn = get_sub_field( 'box_colored_btn' );
-                                $box_colored_btn_clr = get_sub_field( 'box_colored_btn_clr' );
-                                ?>
-                                <?php if ( $box_colored_btn ) : ?>
-                                <div class="col-sm">
-                                    <div class="box__colored-btn" style="background-color:<?=$box_colored_btn_clr?>">
-                                        <?php echo esc_html( $box_colored_btn ); ?>
-                                    </div>
-                                </div>
-                                <?php endif; ?>
 
-                                <?php endwhile; ?>
+                        <?php if ( have_rows( 'box_colored_btns' ) ) : ?>
+                        <div class="row box__colored-btn--cont" id="box__colored-<?=$box_id?>">
+                            <?php while ( have_rows( 'box_colored_btns' ) ) :
+                            the_row(); 
+                            $box_colored_btn = get_sub_field( 'box_colored_btn' );
+                            $box_colored_btn_clr = get_sub_field( 'box_colored_btn_clr' );
+                            ?>
+                            <?php if ( $box_colored_btn ) : ?>
+                            <div class="col-sm">
+                                <div class="box__colored-btn" style="background-color:<?=$box_colored_btn_clr?>">
+                                    <?php echo esc_html( $box_colored_btn ); ?>
+                                </div>
                             </div>
                             <?php endif; ?>
+
+                            <?php endwhile; ?>
                         </div>
+                        <?php endif; ?>
+
 
 
                         <?php if ( $box_text = get_sub_field( 'box_text' ) ) : ?>
@@ -147,14 +162,26 @@
 
 <script>
 window.addEventListener('load', function() {
-    new Glide('#box-slider-<?=$box_id?>', {
+    var glide = new Glide('#box-slider-<?=$box_id?>', {
         type: 'carousel',
         gap: 0,
-        autoplay: 5000,
-        hoverpause: true,
-    }).mount();
+        // autoplay: 5000,
+        // hoverpause: true,
+    })
+    glide.on(['mount.before', 'run'], () => {
+    const currentIndex = glide.index;
+    if(currentIndex == 0){
+        document.getElementById("box__colored-<?=$box_id?>").classList.remove("hidden");
+    }
+    else{
+        document.getElementById("box__colored-<?=$box_id?>").classList.add("hidden");
+    }
+    // console.log(currentIndex)
+   });
+    glide.mount();
 });
+
 </script>
 
 
-<?php $box_id++ ;?>
+<!-- <?php $box_id++ ;?> -->
