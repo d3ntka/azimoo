@@ -29,7 +29,7 @@
                         <div class="glide" id="box-slider-<?=$box_id?>">
                             <div class="glide__track" data-glide-el="track">
                                 <ul class="glide__slides">
-                                    <?php if ($box_add_colored_img == 'true' ): ?>
+                                    <!-- <?php if ($box_add_colored_img == 'true' ): ?> -->
                                         <?php if ( $box_colored_img ) : ?>
                                         <li class="glide__slide" id="slide__color-<?=$box_id?>">
                                             <div class="slider__img" style="background-image: url('<?=$box_colored_img['url']; ?>')">
@@ -44,7 +44,7 @@
                                             </div>
                                         </li>
                                         <?php endif; ?>
-                                    <?php endif; ?>
+                                    <!-- <?php endif; ?> -->
                                     <?php foreach( $box_imgs as $image ) : 
                                     $url = $image['url'];
                                     $title = $image['title'];
@@ -80,27 +80,26 @@
                             </div>
                         <?php endif; ?>
 
+                        <?php if ($box_add_colored_img == 'true' ): ?>
+                            <?php if ( have_rows( 'box_colored_btns' ) ) : ?>
+                            <div class="row box__colored-btn--cont" id="box__colored-<?=$box_id?>">
+                                <?php while ( have_rows( 'box_colored_btns' ) ) :
+                                the_row(); 
+                                $box_colored_btn = get_sub_field( 'box_colored_btn' );
+                                $box_colored_btn_clr = get_sub_field( 'box_colored_btn_clr' );
+                                ?>
+                                    <?php if ( $box_colored_btn ) : ?>
+                                    <div class="col-sm">
+                                        <div class="box__colored-btn" style="background-color:<?=$box_colored_btn_clr?>">
+                                            <?php echo esc_html( $box_colored_btn ); ?>
+                                        </div>
+                                    </div>
+                                    <?php endif; ?>
 
-                        <?php if ( have_rows( 'box_colored_btns' ) ) : ?>
-                        <div class="row box__colored-btn--cont" id="box__colored-<?=$box_id?>">
-                            <?php while ( have_rows( 'box_colored_btns' ) ) :
-                            the_row(); 
-                            $box_colored_btn = get_sub_field( 'box_colored_btn' );
-                            $box_colored_btn_clr = get_sub_field( 'box_colored_btn_clr' );
-                            ?>
-                            <?php if ( $box_colored_btn ) : ?>
-                            <div class="col-sm">
-                                <div class="box__colored-btn" style="background-color:<?=$box_colored_btn_clr?>">
-                                    <?php echo esc_html( $box_colored_btn ); ?>
-                                </div>
+                                <?php endwhile; ?>
                             </div>
                             <?php endif; ?>
-
-                            <?php endwhile; ?>
-                        </div>
                         <?php endif; ?>
-
-
 
                         <?php if ( $box_text = get_sub_field( 'box_text' ) ) : ?>
                         <div class="row justify-content-center">
@@ -111,9 +110,6 @@
                             </div>
                         </div>
                         <?php endif; ?>
-
-                        
-                        
                         
                         <?php if ( have_rows( 'box_chassis' ) ) : ?>
                             <div class="box__chassis--compat">
@@ -159,26 +155,28 @@
         </div>
 </section>
 
-
 <script>
-window.addEventListener('load', function() {
+window.addEventListener('DOMContentLoaded', function() {
     var glide = new Glide('#box-slider-<?=$box_id?>', {
         type: 'carousel',
         gap: 0,
         // autoplay: 5000,
         // hoverpause: true,
     })
-    glide.on(['mount.before', 'run'], () => {
+    glide.mount();
+    glide.on([ 'run'], () => {
     const currentIndex = glide.index;
-    if(currentIndex == 0){
-        document.getElementById("box__colored-<?=$box_id?>").classList.remove("hidden");
+    if(document.getElementById("box__colored-<?=$box_id?>")){
+        if(currentIndex == 0 ){
+            document.getElementById("box__colored-<?=$box_id?>").classList.remove("hidden");
+        }
+        else{
+            document.getElementById("box__colored-<?=$box_id?>").classList.add("hidden");
+        }
     }
-    else{
-        document.getElementById("box__colored-<?=$box_id?>").classList.add("hidden");
-    }
+
     // console.log(currentIndex)
    });
-    glide.mount();
 });
 
 </script>
