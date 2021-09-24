@@ -68,9 +68,8 @@
 }
 
 .section{
-    &__main{
-    // padding-top: 40px;
-    }
+    // &__main{
+    // }
     &__cont{
         padding-top:5rem;
         padding-bottom:10rem;
@@ -98,9 +97,8 @@
 
 .box{
     line-height: 1.5;
-    &__main{
-    // padding-top: 40px;
-    }
+    // &__main{
+    // }
     &__cont{
         padding-top:5rem;
         padding-bottom:10rem;
@@ -178,11 +176,11 @@
             margin-bottom: 3rem;
             font-size: 1.6rem;
         }
-        &--cont{
+        // &--cont{
             // &:not(:last-child){
             //     border-right: 1px solid $primary-light;
             // }
-        }
+        // }
         &--manufacturer{
             background-color: $primary;
             color: #fff;

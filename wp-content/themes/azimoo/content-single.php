@@ -20,9 +20,9 @@
 			endif;
 
 			printf(
-				$utility_text,
+				// $utility_text,
 				$category_list,
-				$tag_list,
+				// $tag_list,
 				esc_url( get_the_permalink() ),
 				the_title_attribute( 'echo=0' ),
 				get_the_author(),

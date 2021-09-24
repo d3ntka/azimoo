@@ -22,7 +22,7 @@
 			?>
 		</main><!-- /#main -->
 		<footer id="footer" class="footer">
-		<button id="scrollToTopBtn"><span class="gg-chevron-up"></span></button>
+			<button id="scrollToTopBtn" title='<?php _e("Przewiń do góry", "azimoo"); ?>'><span class="gg-chevron-up"></span></button>
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-auto">
