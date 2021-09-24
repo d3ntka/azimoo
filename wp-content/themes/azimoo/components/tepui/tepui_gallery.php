@@ -23,9 +23,9 @@ $indent = get_sub_field( 'indent' );
                 <!-- <div class="row justify-content-center"> -->
                     <!-- <div class="col-auto"> -->
                         <div class="section__title text-divider <?php if ($section_bg_color == 'white') : echo("text-divider--dark"); endif?>">
-                            <h1>
+                            <h2>
                                 <?php echo ( $section_title ); ?> 
-                            </h1>
+                            </h2>
                         </div>
                     <!-- </div> -->
                 <!-- </div> -->
@@ -49,9 +49,9 @@ $indent = get_sub_field( 'indent' );
                         <div class="col-md-6 tepui__gallery">
                                 <div class="tepui__gallery--title">
                                     <?php if ( $tepui_gallery_title = get_sub_field( 'tepui_gallery_title' ) ) : ?>
-                                        <h1>
+                                        <h3 class="centered">
                                             <?php echo esc_html( $tepui_gallery_title ); ?>
-                                        </h1>
+                                        </h3>
                                     <?php endif; ?>
                                 </div>
                                 <div class="tepui__gallery--imgs" id="tepui-gallery-<?=$tepui_gallery_id?>">

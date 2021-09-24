@@ -13,9 +13,9 @@
                 <!-- <div class="row justify-content-center"> -->
                     <!-- <div class="col-auto"> -->
                         <div class="section__title text-divider <?php if ($section_bg_color == 'white') : echo("text-divider--dark"); endif?>">
-                            <h1>
+                            <<?=$section_header_style?>>
                                 <?php echo ( $section_title ); ?> 
-                            </h1>
+                            </<?=$section_header_style?>>
                         </div>
                     <!-- </div> -->
                 <!-- </div> -->

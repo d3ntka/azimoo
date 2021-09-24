@@ -9,5 +9,6 @@ $indent = get_sub_field( 'indent' );
 $section_add_imgs = get_sub_field( 'section_add_imgs' );
 $section_add_shortcode = get_sub_field( 'section_add_shortcode' );
 $section_shortcode = get_sub_field( 'section_shortcode' );
+$section_header_style = get_sub_field( 'section_header_style' );
 
 ?>

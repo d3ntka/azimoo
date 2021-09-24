@@ -15,10 +15,10 @@
                         <!-- <div class="row justify-content-center"> -->
                         <!-- <div class="col-auto"> -->
                         <div class="box__title text-divider">
-                            <h1>
+                            <h2>
                                 AZIMOO <i>BOX</i>
                                 <?php echo ( $box_title ); ?>
-                            </h1>
+                            </h2>
                         </div>
                         <!-- </div> -->
                         <!-- </div> -->

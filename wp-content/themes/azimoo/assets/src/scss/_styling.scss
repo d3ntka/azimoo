@@ -21,13 +21,19 @@ h1 {
 }
 
 h2 {
-  // @include rfs(4rem);
-  // font-weight: 500;
+  @include rfs(3.0rem);
+  text-align: center;
+  font-weight: 400;
 }
 
 h3 {
   font-size: 1.9rem;
   line-height: 1.5;
+}
+
+.emph{
+  font-size: larger;
+  font-weight: bolder;
 }
 
 // p{
