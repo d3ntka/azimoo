@@ -73,9 +73,8 @@
 								$link_title = $link['title'];
 								$link_target = $link['target'] ? $link['target'] : '_self';
 								?>
-								<a class="form-btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+								<a class="form-btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php _e('Napisz','azimoo'); ?></a>
 							<?php endif; ?>
-							<!-- <a href="#" class="form-btn">Napisz</a> -->
 							<div>
 							<?php if ( $options_footer_contact ) : ?>
 								<?php echo $options_footer_contact; ?>
