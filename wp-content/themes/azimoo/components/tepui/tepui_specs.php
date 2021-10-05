@@ -31,13 +31,13 @@ $indent = get_sub_field( 'indent' );
             <?php endif; ?>
 
             <?php if ( have_rows( 'tepui_specs_attrs' ) ) : ?>
-                <div class="row justify-content-between">
+                <div class="row justify-content-center md-justify-content-between">
 
                 <?php while ( have_rows( 'tepui_specs_attrs' ) ) :
                     the_row(); ?>
                     
                     <?php if ( $tepui_specs_attr = get_sub_field( 'tepui_specs_attr' ) ) : ?>
-                        <div class="col-auto tepui__specs__attr">
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-auto tepui__specs__attr mt-5">
                             <?php echo $tepui_specs_attr ; ?>
                         </div>
                     <?php endif; ?>

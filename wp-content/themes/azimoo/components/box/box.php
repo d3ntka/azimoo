@@ -89,7 +89,7 @@
                                 $box_colored_btn_clr = get_sub_field( 'box_colored_btn_clr' );
                                 ?>
                                     <?php if ( $box_colored_btn ) : ?>
-                                    <div class="col-sm">
+                                    <div class="col-6 col-sm">
                                         <div class="box__colored-btn" style="background-color:<?=$box_colored_btn_clr?>">
                                             <?php echo esc_html( $box_colored_btn ); ?>
                                         </div>
