@@ -76,7 +76,9 @@
                         <?php if ( $box_unit_arr = get_sub_field( 'box_unit_arr' ) ) : ?>
                             <div class="box__arrangments">
                                 <?php 
-                                _e('Dysponujemy'. " ".$box_unit_arr." ".'możliwościami aranżacji przestrzeni unitu.') ; ?>
+                                _e('Dysponujemy','azimoo');
+                                _e(" ".$box_unit_arr." ");
+                                _e('możliwościami aranżacji przestrzeni unitu.', 'azimoo') ; ?>
                             </div>
                         <?php endif; ?>
 
@@ -113,7 +115,8 @@
                         
                         <?php if ( have_rows( 'box_chassis' ) ) : ?>
                             <div class="box__chassis--compat">
-                                <?php _e("<b>AZIMOO BOX</b>"." ".$box_title." "."<b>jest kompatybilny między innymi z poniższymi podwoziami:</b>"); ?>
+                                <?php _e("<b>AZIMOO BOX</b>"." ".$box_title." ");
+                                _e("<b>jest kompatybilny między innymi z poniższymi podwoziami:</b>","azimoo"); ?>
                             </div>
                             <div class="box__chassis">
                                 <div class="row g-0">
