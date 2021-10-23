@@ -13,9 +13,9 @@
     <div class="box__list--wrap">
         <div class="box__list">
             <ul>
-                <li class="box__list--title">
+                <!-- <li class="box__list--title">
                     <?php _e('jednostka', 'azimoo'); ?>
-                </li>
+                </li> -->
             <?php 
               foreach ($anchors as $anchor) {
                 ?>

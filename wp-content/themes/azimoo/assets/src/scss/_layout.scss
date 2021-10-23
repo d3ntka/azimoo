@@ -262,6 +262,10 @@
                 align-items: center;
                 padding-top: 0.5rem;
                 padding-bottom: .5rem;
+                margin-right: 4rem;
+                @include media-breakpoint-down(lg){
+                    margin-right: 2rem;
+                }
                 a{
                     display: block;
                     color: #fff;
@@ -271,10 +275,6 @@
                     }
                 }
                 &:not(:first-child){
-                    margin-right: 4rem;
-                    @include media-breakpoint-down(lg){
-                        margin-right: 2rem;
-                    }
                     &::before {
                             content: "";
                             width: 2px;
