@@ -315,6 +315,27 @@
             margin-top: 3rem;
         }
     }
+    .dealers{
+        padding: 1rem 0;
+        margin-top: 1rem;
+        border-top: 1px solid $primary;
+        &__row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__txt{
+
+        }
+        &__img{
+            padding-left: 2rem;
+            img{
+                max-width: 16rem;
+                max-height: 16rem;
+            }
+
+        }
+    }
 }
 
 .wpcf7-form{

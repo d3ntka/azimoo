@@ -33,6 +33,7 @@
                         <?php echo $options_address; ?>
                     <?php endif; ?>
                     </div>
+                    <?php get_template_part('components/contact/dealers'); ?>
                 </div>
             </div>
             <div class="col-md-5">
