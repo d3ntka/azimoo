@@ -16,6 +16,6 @@ $transition: .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 $navbar-dark-background: $gray-2;
 $navbar-dark-background-color: $gray-2;
 $navbar-dark-color: rgba(255,255,255, 1);
-$navbar-dark-hover-color: rgba($primary-light, 1);
+$navbar-dark-hover-color: rgba($primary-light, 0.7);
 $navbar-dark-disabled-color: rgba(255,255,255, 0.3);
-$navbar-dark-active-color: rgba($gray-1, 1);
+$navbar-dark-active-color: rgba($primary-light, 1);
