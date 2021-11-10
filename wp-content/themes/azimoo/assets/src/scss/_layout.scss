@@ -323,12 +323,23 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            @include media-breakpoint-only(md){
+                flex-wrap: wrap;
+            }
+        }
+        &__flag{
+            img{
+                max-width: 8rem;
+                max-height: auto;
+            }
         }
         &__txt{
-
+            padding: 0 2rem;
+            @include media-breakpoint-only(md){
+                padding-top: 1rem;
+            }
         }
         &__img{
-            padding-left: 2rem;
             img{
                 max-width: 16rem;
                 max-height: 16rem;

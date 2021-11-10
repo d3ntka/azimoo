@@ -26,7 +26,7 @@
         <?php endif; ?>
 
         <div class="row justify-content-center contact__info">
-            <div class="col-md-5 d-flex justify-content-center">
+            <div class="col-md-6 d-flex justify-content-center">
                 <div>
                     <div class="contact__info--address">
                     <?php if ( $options_address = get_field( 'options_address', 'options' )) : ?>
