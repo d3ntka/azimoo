@@ -313,13 +313,16 @@
         }
         &--address{
             margin-top: 3rem;
+            img{
+                margin-right: 2rem;
+            }
         }
     }
     .dealers{
-        padding: 1rem 0;
-        margin-top: 1rem;
-        border-top: 1px solid $primary;
         &__row{
+            padding: 1rem 0;
+            margin-top: 1rem;
+            border-top: 1px solid $primary;
             display: flex;
             align-items: center;
             justify-content: space-between;

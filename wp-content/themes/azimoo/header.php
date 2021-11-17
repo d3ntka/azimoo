@@ -30,6 +30,7 @@
 
 	$search_enabled  = get_theme_mod( 'search_enabled', '1' ); // Get custom meta-value.
 	$options_fb = get_field( 'options_fb', 'options' ) ;
+	$options_ig = get_field( 'options_ig', 'options' ) ;
 ?>
 
 <body <?php body_class(); ?>>
@@ -77,6 +78,12 @@
 					?>
 				</div><!-- /.navbar-collapse -->
 				<div class="navbar__aux">
+					<?php if ( $options_ig ) : ?>
+						<a target="_blank" href="<?php echo esc_url( $options_ig ); ?>">
+							<i class="icon-insta-logo"></i>
+						</a>
+					<?php endif; ?>
+
 					<?php if ( $options_fb ) : ?>
 						<a target="_blank" href="<?php echo esc_url( $options_fb ); ?>">
 							<i class="icon-fb-logo"></i>

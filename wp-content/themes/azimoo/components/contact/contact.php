@@ -28,10 +28,13 @@
         <div class="row justify-content-center contact__info">
             <div class="col-md-6 d-flex justify-content-center">
                 <div>
-                    <div class="contact__info--address">
-                    <?php if ( $options_address = get_field( 'options_address', 'options' )) : ?>
-                        <?php echo $options_address; ?>
-                    <?php endif; ?>
+                    <div class="contact__info--address d-flex align-items-center">
+                        <div class="dealers__flag">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/pl.webp" alt="Flag of Poland" />
+                        </div>                    
+                        <?php if ( $options_address = get_field( 'options_address', 'options' )) : ?>
+                            <?php echo $options_address; ?>
+                        <?php endif; ?>
                     </div>
                     <?php get_template_part('components/contact/dealers'); ?>
                 </div>
